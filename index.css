@@ -5,7 +5,6 @@ body {
 }
 #Coming {
     display: flex;
-    padding: 211px 413.111px 211px 414px;
     justify-content: center;
     align-items: center;
     background: url(image.jpg);
