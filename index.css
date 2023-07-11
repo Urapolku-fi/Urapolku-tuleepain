@@ -1,5 +1,7 @@
 body {
     margin: auto;
+    background-color: rgb(11,2,33);
+
 }
 #Coming {
     display: flex;
@@ -14,7 +16,6 @@ body {
 }
 #Main-wrapper {
     display: flex;
-    width: 612.889px;
     flex-direction: column;
     align-items: center;
     gap: 80px;
@@ -33,7 +34,6 @@ body {
     font-style: normal;
     line-height: normal;
     font-weight: 800;
-    width: 900px;
     text-align: center;
 }
 .Top-text-frame p {
@@ -46,7 +46,6 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%;
     position: relative;
     top: -50px;
 }
@@ -79,33 +78,29 @@ body {
     left: 130px;
 }
 @media only screen and (max-width: 550px) {
-    body {
-        height: 550px;
-    }
     #Coming {
         display: flex;
         width: 100%;
-        height: 100%;
-        padding: 146.404px 0px 404.404px 0px;
+        height: 100vh;
+        padding: 0;
         flex-direction: column;
         align-items: center;
-        padding-top: 0px;
         background-repeat: repeat;
+        margin-right: 0px;
         
     }
     #Main-wrapper {
         display: flex;
-        width: 638px;
         flex-direction: column;
         align-items: center;
-        gap: 11px;
     }
     .Top-text-frame {
         display: flex;
-        padding: 30px 145px;
+        padding: 30px 0px;
         flex-direction: column;
         align-items: center;
         gap: 39px;
+        width: 100%;
     }
     .Top-text-frame h1 {
         color: rgba(236, 236, 236, 0.90);
@@ -157,14 +152,29 @@ body {
     }
   }
   @media only screen and (max-width: 400px) {
+    body {
+        background: none;
+    }
     #Coming {
         padding-top: 50px;
+        margin-bottom: 0px;
+    }
+    #Main-wrapper {
+        position: relative;
+        top: -150px;
+    }
+    .Top-text-frame {
+        width: 100%;
+        gap: 0px;
     }
     .Top-text-frame h1 {
-        font-size: 45px;
+        font-size: 40px;
+        width: 100%;
     }
     .Button-frame {
         width: 325px;
+        position: relative;
+        top: -80px;
     }
     .Button-frame p {
         left: 55px;
