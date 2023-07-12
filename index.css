@@ -131,9 +131,10 @@ body {
         align-items: flex-start;
         gap: 54px;
         width: 350px;
-
         border-radius: 37.43px;
         border: 0.624px solid #FFF;
+        position: relative;
+        top: -150px;
     }
     .Frame {
         display: flex;
@@ -168,10 +169,12 @@ body {
     .Top-text-frame {
         width: 100%;
         gap: 0px;
+        top: 45px;
     }
     .Top-text-frame h1 {
         font-size: 40px;
         width: 100%;
+        padding-bottom: 40px;
     }
     .Button-frame {
         width: 325px;
