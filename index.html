@@ -49,6 +49,7 @@
   </body>
   <script>
     document.addEventListener("wheel", (event) => {
+      console.log(event);
       let aisc = document.querySelector("#screen-ai");
       aisc.classList.add("slide-up-in");
       aisc.classList.remove("invisible");
