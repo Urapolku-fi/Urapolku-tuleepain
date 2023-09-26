@@ -1,179 +1,102 @@
+:root {
+  --white: #ececec;
+}
+
 body {
-  margin: auto;
-  background-color: rgb(11, 2, 33);
-}
-#Coming {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(image.jpg);
-  background-position: -37.404px -3.244px;
-  background-size: 105.195% 101.71%;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 1, 33, 1) 0%,
+    rgba(56, 49, 68, 1) 66%,
+    rgba(255, 255, 255, 1) 120%
+  );
   background-repeat: no-repeat;
-  background-color: lightgray;
-  height: 780px;
+  height: 100vh;
+  margin: 0;
 }
-#Main-wrapper {
+
+main {
+  height: calc(100% - 4.5rem);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+#navbar {
+  display: flex;
+  height: 4.5rem;
+  padding: 0rem 9rem;
+  justify-content: space-between;
   align-items: center;
-  gap: 80px;
   flex-shrink: 0;
 }
-.Top-text-frame {
+
+.navbar-logo-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 37px;
+  gap: 0.5rem;
 }
-.Top-text-frame h1 {
-  color: rgba(236, 236, 236, 0.9);
+
+.navbar-logo-container > img {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.navbar-logo-container > p {
   font-family: Montserrat;
-  font-size: 96px;
+  font-size: 1.375rem;
   font-style: normal;
-  line-height: normal;
-  font-weight: 800;
-  text-align: center;
+  font-weight: 700;
+  margin: 0;
+  color: var(--white);
 }
-.Top-text-frame p {
+
+.navbar-links-container {
   display: flex;
-  width: 568px;
-  flex-direction: column;
-  color: rgba(236, 236, 236, 0.79);
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  gap: 3rem;
+}
+
+.navbar-links-container a {
+  font-family: Montserrat;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  position: relative;
-  top: -50px;
+  text-decoration: none;
+  color: var(--white);
 }
-.Button-frame {
-  display: flex;
-  padding: 8px 16px;
-  align-items: center;
-  gap: 108px;
 
-  border-radius: 60px;
-}
-.Frame {
-  display: flex;
-  width: 505px;
-  padding: 0px 35px;
-  align-items: center;
-  gap: 108px;
-}
-.Frame p {
-  width: 100%;
+#hero h1 {
+  color: var(--white);
   text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-family: Montserrat;
+  font-size: 4rem;
   font-style: normal;
-  line-height: 160%;
-  color: rgba(236, 236, 236, 0.63);
+  font-weight: 700;
+  line-height: 100%; /* 4rem */
+  letter-spacing: 0.04rem;
 }
-@media only screen and (max-width: 550px) {
-  #Coming {
-    display: flex;
-    height: 100vh;
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-    background-repeat: repeat;
-    margin-right: 0px;
-  }
-  #Main-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .Top-text-frame {
-    display: flex;
-    padding: 30px 0px;
-    flex-direction: column;
-    align-items: center;
-    gap: 39px;
-    width: 100%;
-    position: relative;
-    top: -50px;
-  }
-  .Top-text-frame h1 {
-    color: rgba(236, 236, 236, 0.9);
-    font-family: Montserrat;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-  }
-  .Top-text-frame p {
-    display: flex;
-    width: 348px;
-    flex-direction: column;
 
-    color: rgba(236, 236, 236, 0.79);
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-  }
-  .Button-frame {
-    display: flex;
-    padding: 5px;
-    align-items: flex-start;
-    gap: 54px;
-    width: 350px;
-    border-radius: 37.43px;
-    position: relative;
-    top: -150px;
-  }
-  .Frame {
-    display: flex;
-    padding: 6px;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .Frame p {
-    color: rgba(236, 236, 236, 0.63);
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-
-    left: 75px;
-  }
+#hero p {
+  color: var(--white);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  max-width: 50rem;
+  margin: auto;
 }
-@media only screen and (max-width: 400px) {
-  body {
-    background: none;
-  }
-  #Coming {
-    padding-top: 50px;
-    margin-bottom: 0px;
-  }
-  #Main-wrapper {
-    position: relative;
-    top: -150px;
-  }
-  .Top-text-frame {
-    width: 100%;
-    gap: 0px;
-    top: 45px;
-  }
-  .Top-text-frame h1 {
-    font-size: 40px;
-    width: 100%;
-    padding-bottom: 40px;
-  }
-  .Button-frame {
-    width: 325px;
-    position: relative;
-    top: -80px;
-  }
-  .Button-frame p {
-    left: 55px;
-  }
+
+#hero {
+  margin-top: 3rem;
+}
+
+#screen-images {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+#screen-images img {
+  height: 100%;
+  max-width: 100%;
 }
