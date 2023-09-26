@@ -92,11 +92,50 @@ main {
 
 #screen-images {
   display: flex;
-  justify-content: center;
-  align-items: end;
+  align-items: center;
+  flex-direction: column;
+  justify-content: end;
 }
 
 #screen-images img {
-  height: 100%;
+  height: 50%;
   max-width: 100%;
+  position: absolute;
+}
+
+#screen-images .invisible {
+  opacity: 0;
+  max-width: 0;
+  height: 0;
+}
+
+#screen-images .slide-up-out {
+  opacity: 0;
+  animation: linear fade-out-up 0.7s;
+}
+
+#screen-images .slide-up-in {
+  opacity: 1;
+  animation: ease-out fade-in-up 0.7s;
+}
+
+@keyframes fade-out-up {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate(0, -101%) scale(0.8);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0.8;
+    transform: translate(0, 110%) scale(1.3);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
 }

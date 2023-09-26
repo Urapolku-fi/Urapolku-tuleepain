@@ -33,8 +33,27 @@
         </p>
       </section>
       <section id="screen-images">
-        <img src="imgs/screen-home.png" alt="urapolku home page screen" />
+        <img
+          id="screen-home"
+          src="imgs/screen-home.png"
+          alt="urapolku home page screen"
+        />
+        <img
+          id="screen-ai"
+          src="imgs/screen-ai.png"
+          class="invisible"
+          alt="urapolku ai page screen"
+        />
       </section>
     </main>
   </body>
+  <script>
+    document.addEventListener("wheel", (event) => {
+      let aisc = document.querySelector("#screen-ai");
+      aisc.classList.add("slide-up-in");
+      aisc.classList.remove("invisible");
+      let homesc = document.querySelector("#screen-home");
+      homesc.classList.add("slide-up-out");
+    });
+  </script>
 </html>
