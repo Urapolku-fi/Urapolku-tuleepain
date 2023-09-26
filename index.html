@@ -13,7 +13,7 @@
     <link rel="icon" type="urapolku" href="imgs/urapolku.png"">
     <title>Urapolku</title>
   </head>
-  <body>
+  <body onload="addAnimDuration()">
     <nav id="navbar">
       <div class="navbar-logo-container">
         <img src="imgs/urapolku.png" alt="urapolku logo" />
@@ -41,20 +41,37 @@
         <img
           id="screen-ai"
           src="imgs/screen-ai.png"
-          class="invisible"
           alt="urapolku ai page screen"
         />
       </section>
     </main>
   </body>
   <script>
+    let aisc = document.querySelector("#screen-ai");
+    let homesc = document.querySelector("#screen-home");
+    let animationRunning = false;
+
+    function resetAnimation(elem1, elem2) {
+      elem1.style.animationPlayState = "running";
+      elem2.style.animationPlayState = "running";
+      elem1.style.animationName = "fade-in-up";
+      elem2.style.animationName = "fade-out-up";
+      setTimeout(() => {
+        elem2.style.animationName = "none";
+      }, 700);
+    }
+
     document.addEventListener("wheel", (event) => {
-      console.log(event);
-      let aisc = document.querySelector("#screen-ai");
-      aisc.classList.add("slide-up-in");
-      aisc.classList.remove("invisible");
-      let homesc = document.querySelector("#screen-home");
-      homesc.classList.add("slide-up-out");
+      if (event.wheelDelta > 0) {
+        //scroll up
+        homesc.classList.remove("slide-up-out");
+        aisc.classList.remove("slide-up-in");
+      } else {
+        //scroll down
+        aisc.classList.add("slide-up-in");
+        homesc.classList.add("slide-up-out");
+        resetAnimation(aisc, homesc);
+      }
     });
   </script>
 </html>
