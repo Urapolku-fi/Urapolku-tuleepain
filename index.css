@@ -74,7 +74,7 @@ main {
   font-size: 4rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 4rem */
+  margin-top: 1rem;
   letter-spacing: 0.04rem;
 }
 
@@ -89,10 +89,6 @@ main {
   margin: auto;
 }
 
-#hero {
-  margin-top: 3rem;
-}
-
 #screen-images {
   display: flex;
   align-items: center;
@@ -101,25 +97,37 @@ main {
 }
 
 #screen-images img {
-  height: 50%;
-  max-width: 100%;
+  height: 70vh;
   position: absolute;
-}
-
-#screen-images .invisible {
-  opacity: 0;
-  max-width: 0;
-  height: 0;
 }
 
 #screen-images .slide-up-out {
   opacity: 0;
-  animation: linear fade-out-up 0.7s;
+  animation-direction: normal;
+  animation-play-state: running;
 }
 
 #screen-images .slide-up-in {
   opacity: 1;
-  animation: ease-out fade-in-up 0.7s;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+
+#screen-home {
+  animation-name: fade-out-up;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  animation-duration: 0.7s;
+  animation-play-state: paused;
+}
+
+#screen-ai {
+  opacity: 0;
+  animation-name: fade-in-up;
+  animation-direction: reverse;
+  animation-timing-function: ease-out;
+  animation-duration: 0.7s;
+  animation-play-state: paused;
 }
 
 @keyframes fade-out-up {
@@ -140,5 +148,11 @@ main {
   to {
     opacity: 1;
     transform: translate(0, 0) scale(1);
+  }
+}
+
+@media screen and (max-height: 950px) {
+  #screen-images img {
+    height: 60vh;
   }
 }

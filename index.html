@@ -41,20 +41,54 @@
         <img
           id="screen-ai"
           src="imgs/screen-ai.png"
-          class="invisible"
           alt="urapolku ai page screen"
         />
       </section>
     </main>
   </body>
   <script>
+    let aisc = document.querySelector("#screen-ai");
+    let homesc = document.querySelector("#screen-home");
+    let animationRunning = false;
+    let lastScrollDirection = "up";
+
+    function resetAnimation(elem1, elem2) {
+      //black magic
+      elem1.style.animationPlayState = "running";
+      elem2.style.animationPlayState = "running";
+      elem1.style.animationName = "fade-in-up";
+      elem2.style.animationName = "fade-out-up";
+      setTimeout(() => {
+        elem1.style.animationName = "none";
+        elem2.style.animationName = "none";
+        animationRunning = false;
+      }, 700);
+    }
+
     document.addEventListener("wheel", (event) => {
-      console.log(event);
-      let aisc = document.querySelector("#screen-ai");
-      aisc.classList.add("slide-up-in");
-      aisc.classList.remove("invisible");
-      let homesc = document.querySelector("#screen-home");
-      homesc.classList.add("slide-up-out");
+      if (
+        event.wheelDelta > 0 &&
+        lastScrollDirection !== "up" &&
+        !animationRunning
+      ) {
+        //scroll up
+        animationRunning = true;
+        lastScrollDirection = "up";
+        homesc.classList.remove("slide-up-out");
+        aisc.classList.remove("slide-up-in");
+        resetAnimation(aisc, homesc);
+      } else if (
+        event.wheelDelta < 0 &&
+        lastScrollDirection !== "down" &&
+        !animationRunning
+      ) {
+        //scroll down
+        animationRunning = true;
+        lastScrollDirection = "down";
+        aisc.classList.add("slide-up-in");
+        homesc.classList.add("slide-up-out");
+        resetAnimation(aisc, homesc);
+      }
     });
   </script>
 </html>
