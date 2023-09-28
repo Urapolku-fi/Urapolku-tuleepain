@@ -199,3 +199,37 @@ main {
     max-width: 100%;
   }
 }
+
+@media screen and (max-width: 750px) {
+  body {
+    background: url("imgs/image.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  #screen-images {
+    display: none;
+  }
+
+  #starfield {
+    display: none;
+  }
+
+  main {
+    justify-content: center;
+  }
+
+  #hero {
+    margin: 3rem;
+  }
+
+  #hero h1 {
+    letter-spacing: unset;
+  }
+
+  #navbar {
+    display: none;
+  }
+}
