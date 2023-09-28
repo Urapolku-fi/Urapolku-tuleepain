@@ -141,6 +141,30 @@ main {
   z-index: -1;
 }
 
+#floating-social-button {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 100%;
+  background-color: #0b0121;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 500ms;
+}
+
+#floating-social-button:hover {
+  background-color: #0b0121cc;
+}
+
+#floating-social-button img {
+  height: 50%;
+  max-width: 50%;
+  filter: invert(1);
+}
+
 @keyframes fade-out-up {
   from {
     opacity: 1;
