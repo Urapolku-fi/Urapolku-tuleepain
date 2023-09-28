@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="urapolku" href="imgs/urapolku.png"">
+    <link rel="icon" type="image/png" href="imgs/urapolku.png"">
     <title>Urapolku</title>
   </head>
   <body>
@@ -44,51 +44,10 @@
           alt="urapolku ai page screen"
         />
       </section>
+      <canvas id="starfield"></canvas>
     </main>
   </body>
-  <script>
-    let aisc = document.querySelector("#screen-ai");
-    let homesc = document.querySelector("#screen-home");
-    let animationRunning = false;
-    let lastScrollDirection = "up";
-
-    function resetAnimation(elem1, elem2) {
-      //black magic
-      elem1.style.animationPlayState = "running";
-      elem2.style.animationPlayState = "running";
-      elem1.style.animationName = "fade-in-up";
-      elem2.style.animationName = "fade-out-up";
-      setTimeout(() => {
-        elem1.style.animationName = "none";
-        elem2.style.animationName = "none";
-        animationRunning = false;
-      }, 700);
-    }
-
-    document.addEventListener("wheel", (event) => {
-      if (
-        event.wheelDelta > 0 &&
-        lastScrollDirection !== "up" &&
-        !animationRunning
-      ) {
-        //scroll up
-        animationRunning = true;
-        lastScrollDirection = "up";
-        homesc.classList.remove("slide-up-out");
-        aisc.classList.remove("slide-up-in");
-        resetAnimation(aisc, homesc);
-      } else if (
-        event.wheelDelta < 0 &&
-        lastScrollDirection !== "down" &&
-        !animationRunning
-      ) {
-        //scroll down
-        animationRunning = true;
-        lastScrollDirection = "down";
-        aisc.classList.add("slide-up-in");
-        homesc.classList.add("slide-up-out");
-        resetAnimation(aisc, homesc);
-      }
-    });
-  </script>
+  <script src="js/slide.js" type="text/javascript"></script>
+  <script src="js/stars.js" type="text/javascript"></script>
+  <script src="js/animationHandler.js" type="text/javascript"></script>
 </html>
