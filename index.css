@@ -191,3 +191,11 @@ main {
     height: 60vh;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  #screen-images img {
+    height: unset;
+    max-height: 50%;
+    max-width: 100%;
+  }
+}
