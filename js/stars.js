@@ -74,7 +74,6 @@ function animate(){
 }
 function updateStars() {
   arrStars.forEach((star) => {
-    console.log(star);
     // Calculate the direction from the star to the center
     let dirX = centerX - star.x;
     let dirY = centerY - star.y;
