@@ -119,7 +119,7 @@ function animateStars() {
   }
 }
 function playAnimationFor(duration) {
-  speed = 4;
+  speed = 2;
   animateStars();
   setTimeout(() => {
     speed = 0;
