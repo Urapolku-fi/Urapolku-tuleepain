@@ -114,11 +114,13 @@ function updateStars() {
 
 animate();
 function animateStars() {
-  updateStars();
-  requestAnimationFrame(() => animateStars()); // Save the ID of the animation frame
+  if (speed > 0) {
+    updateStars();
+    requestAnimationFrame(() => animateStars()); // Save the ID of the animation frame
+  }
 }
 function playAnimationFor(duration) {
-  speed = 2;
+  speed = 4;
   animateStars();
   setTimeout(() => {
     speed = 0;
