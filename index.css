@@ -279,7 +279,7 @@ main {
 @media screen and (max-width:1600px) {
   #screen-images img {
     height: unset;
-    max-height: 60%;
+    max-height: 75%;
     max-width:100%;
   }
 }
@@ -287,7 +287,7 @@ main {
 @media screen and (max-width: 1200px) {
   #screen-images img {
     height: unset;
-    max-height: 60%;
+    max-height: 65%;
     max-width: 100%;
   }
 }
