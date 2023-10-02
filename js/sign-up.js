@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             signupButton.classList.remove('close');
             signupDropdown.classList.remove('open');
             main.classList.remove('open');
-            signupButton.innerHTML = 'Sign up';
+            signupButton.innerHTML = 'Rekisteröidy';
         } else {
             signupButton.classList.add('close');
             signupDropdown.classList.add('open');
