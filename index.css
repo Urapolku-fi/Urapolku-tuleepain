@@ -93,8 +93,9 @@ main {
 }
 
 #screen-images img {
-  height: 65vh;
+  height: 85vh;
   position: absolute;
+  bottom:-10vw;
 }
 
 #screen-images .slide-up-out {
@@ -184,7 +185,7 @@ main {
 
 @media screen and (max-height: 950px) {
   #screen-images img {
-    height: 65vh;
+    height: 85vh;
   }
 }
 
