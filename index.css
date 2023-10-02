@@ -51,7 +51,13 @@ main {
 
 .navbar-links-container {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
+}
+
+.navbar-links-container svg {
+  position: relative;
+  top: 2px;
+  width: 64px;
 }
 
 .navbar-links-container a {
@@ -61,6 +67,77 @@ main {
   font-weight: bold;
   text-decoration: none;
   color: var(--white);
+}
+
+#sign-up {
+  position: absolute;
+  top: 70px;
+  padding: 2rem 0rem;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background: #0b0121;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#sign-up form {
+  width:40%;
+  position:relative;
+}
+
+#sign-up h2 {
+  font-family: Montserrat;
+  font-size: 2rem;
+  text-align:center;
+  margin:0;
+}
+
+#sign-up p {
+  font-family: Montserrat;
+  font-size:1.2rem;
+}
+
+#sign-up .mergeRow label {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  font-family: Montserrat;
+  color: #ffffff91;
+}
+
+#sign-up .mergeRow input {
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid #ffffff7d;
+  padding: 0.8rem;
+  width: 100%;
+  outline: 0;
+  color: white;
+  font-size: 1rem;
+}
+
+#sign-up .mergeRow {
+  position:relative;
+}
+
+#sign-up .submit_container input {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  background: white;
+  border: 0;
+  border-radius: 0px 20px 20px 0px;
+  height: 100%;
+  padding: 0px 20px;
+}
+
+
+#sign-up .field-shift {
+  left: -999999999px;
+  position: absolute;
 }
 
 #hero h1 {
@@ -228,6 +305,6 @@ main {
 
   #navbar {
     display: flex;
-    padding: 0rem 4rem;
+    padding: 0rem 1rem;
   }
 }

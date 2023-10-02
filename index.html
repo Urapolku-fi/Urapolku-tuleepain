@@ -20,9 +20,41 @@
         <p>Urapolku</p>
       </div>
       <div class="navbar-links-container">
-        <a href="#sign-up">Sign up</a>
+        <a class="sign-up-link" href="#sign-up">Sign up</a>
         <a href="/about-us">About us</a>
       </div>
+      <section id="sign-up">
+        <h2>Get updates related to Urapolku,<br/> straight in your inbox!</h2>
+        <p>Arvostamme yksityisyyttäsi. Sähköpostisi on turvassa ja vapaa roskapostista. Kuukausittaiset päivityksemme ovat tehokkaita ja turvallisia.</p>
+        <form action="https://urapolku.us14.list-manage.com/subscribe/post" method="POST">
+          <input type="hidden" name="u" value="0b7716465537c829c075417da">
+          <input type="hidden" name="id" value="8134878ac4">
+          <!-- people should not fill these in and expect good things -->
+          <div class="field-shift" aria-label="Please leave the following three fields empty" aria-hidden="true">
+            <label for="b_name">Name: </label>
+            <input type="text" name="b_name" tabindex="-1" value="" placeholder="Freddie" id="b_name">
+
+            <label for="b_email">Email: </label>
+            <input type="email" name="b_email" tabindex="-1" value="" placeholder="youremail@gmail.com" id="b_email">
+
+            <label for="b_comment">Comment: </label>
+            <textarea name="b_comment" tabindex="-1" placeholder="Please comment" id="b_comment"></textarea>
+          </div>
+          <div id="mergeTable" class="mergeTable">
+            <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+              <div class="field-group">
+                <input type="email" placeholder="Enter your email address" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="submit_container clear">
+            <input type="submit" class="formEmailButton" name="submit" value="Notify Me">
+          </div>
+          <input type="hidden" name="ht" value="9f8878332ad384ed28c330efb4a3b704e34b08d0:MTY5NjI2MTY4NS40OTA3">
+          <input type="hidden" name="mc_signupsource" value="hosted">
+        </form>
+      </section>
     </nav>
     <main>
       <section id="hero">
@@ -55,6 +87,7 @@
     </a>
     <canvas id="starfield"></canvas>
   </body>
+  <script src="js/sign-up.js" type="text/javascript"></script>
   <script src="js/slide.js" type="text/javascript"></script>
   <script src="js/stars.js" type="text/javascript"></script>
   <script src="js/animationHandler.js" type="text/javascript"></script>
