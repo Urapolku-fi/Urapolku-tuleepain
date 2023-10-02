@@ -133,6 +133,7 @@ main {
   outline: 0;
   color: white;
   font-size: 1rem;
+  font-family: Montserrat;
 }
 
 #sign-up .mergeRow {
@@ -148,6 +149,7 @@ main {
   border-radius: 0px 20px 20px 0px;
   height: 100%;
   padding: 0px 20px;
+  font-family: Montserrat;
 }
 
 
