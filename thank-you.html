@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="imgs/urapolku.png">
+    <title>Urapolku</title>
+</head>
+<body class="thank-you">
+<nav id="navbar">
+    <div class="navbar-logo-container">
+        <img src="imgs/urapolku.png" alt="urapolku logo" />
+        <p><a href="/">Urapolku</a></p>
+    </div>
+</nav>
+<main>
+    <section id="hero">
+        <h1>Kiitos uutiskirjeemme tilaamisesta!</h1>
+    </section>
+    <section id="screen-images">
+        <img
+                id="screen-home"
+                src="imgs/screen-home.png"
+                alt="urapolku home page screen"
+                style="animation-play-state: running; animation-name: none;"
+        />
+        <img
+                id="screen-ai"
+                src="imgs/screen-ai.png"
+                alt="urapolku ai page screen"
+                style="animation-play-state: running; animation-name: none;"
+        />
+    </section>
+</main>
+<a
+        id="floating-social-button"
+        href="https://www.linkedin.com/company/urapolku/about/"
+>
+    <img src="imgs/linkedin.svg" alt="linkedin" />
+</a>
+<canvas id="starfield"></canvas>
+</body>
+<script src="js/sign-up.js" type="text/javascript"></script>
+<script src="js/slide.js" type="text/javascript"></script>
+<script src="js/stars.js" type="text/javascript"></script>
+<script src="js/animationHandler.js" type="text/javascript"></script>
+</html>
