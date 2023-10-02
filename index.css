@@ -336,6 +336,7 @@ main {
 
   #hero h1 {
     letter-spacing: unset;
+    margin:0;
   }
 
   #navbar {
