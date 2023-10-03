@@ -158,6 +158,67 @@ main {
   position: absolute;
 }
 
+#about-us {
+  padding: 0rem 10rem 0rem 10rem;
+  height: 100%;
+  position: absolute;
+  z-index: 9999;
+  background: #0b0121;
+  color: white;
+  transform: translateX(100%);
+  font-family: Montserrat;
+  transition:transform 400ms cubic-bezier(0.4, 0.1, 0.7, 0.95);
+}
+
+#about-us.open {
+  transform:translateX(0);
+}
+
+#about-us .title-1 {
+  font-size: 3rem;
+}
+
+#about-us .title-2 {
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+
+#about-us .article-1 p {
+  margin-right: 25rem;
+}
+
+#about-us .horizontal-articles {
+  display: flex;
+}
+
+#about-us .horizontal-articles article {
+  width: 33%;
+  padding: 0rem 2rem 0rem 2rem;
+  border-right: 1px solid #ffffff52;
+}
+
+#about-us .article-2 {
+  padding: 0rem 2rem 0rem 0rem !important;
+}
+
+#about-us .title-3 {
+  display: flex;
+  align-items: center;
+}
+
+#about-us .title-3 img {
+  width: 30px;
+  height: 30px;
+}
+
+#about-us .title-3 h3 {
+  margin-left: 9px;
+}
+
+#about-us .article-4 {
+  border-right: 0 !important;
+}
+
 #hero h1 {
   color: var(--white);
   text-align: center;
