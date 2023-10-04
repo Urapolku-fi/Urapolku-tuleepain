@@ -25,6 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function openAboutUs(aboutUsPage, aboutUsButton, signUpButton, signUpDropdown) {
     let main = document.querySelectorAll('main');
     main = main[0];
+    setTimeout(()=>{
+        document.body.classList.add('about');
+    }, 500);
+    let floatingButton = document.querySelectorAll('#floating-social-button');
+    floatingButton = floatingButton[0];
+    floatingButton.style.display = 'none';
     window.location.hash="#about-us";
     aboutUsButton.classList.add('close');
     aboutUsPage.classList.add('open');
@@ -37,8 +43,22 @@ function openAboutUs(aboutUsPage, aboutUsButton, signUpButton, signUpDropdown) {
 
 function closeAboutUs(aboutUsPage, aboutUsButton, signUpButton) {
     window.location.hash="";
+    setTimeout(()=>{
+        document.body.classList.remove('about');
+    }, 0);
+    let floatingButton = document.querySelectorAll('#floating-social-button');
+    floatingButton = floatingButton[0];
+    floatingButton.style.display = 'grid';
     aboutUsButton.classList.remove('close');
     aboutUsPage.classList.remove('open');
     signUpButton.innerHTML = 'Rekisteröidy';
     aboutUsButton.innerHTML = 'Tietoa meistä';
+}
+
+function isPhone() {
+    if (window.innerWidth <= 750) {
+        return true;
+    } else {
+        return false;
+    }
 }
