@@ -43,16 +43,14 @@ function randomColor(){
   const arrColors = ["ffffff", "ffecd3" , "bfcfff"];
   return "#"+arrColors[Math.floor((Math.random()*3))];
 }
-if (window.innerWidth > 750) {
-  let arrStars = [];
-  for(let i = 0; i < numStars; i++){
-    let randX = Math.floor((Math.random()*canvasWidth)+1);
-    let randY = Math.floor((Math.random()*canvasHeight)+1);
-    let randR = Math.random() * 1.7 + .5;
+let arrStars = [];
+for(let i = 0; i < numStars; i++){
+  let randX = Math.floor((Math.random()*canvasWidth)+1);
+  let randY = Math.floor((Math.random()*canvasHeight)+1);
+  let randR = Math.random() * 1.7 + .5;
 
-    let star = new Star(randX, randY, randR, randomColor());
-    arrStars.push(star);
-  }
+  let star = new Star(randX, randY, randR, randomColor());
+  arrStars.push(star);
 }
 function update(){
   for(let i = 0; i < arrStars.length; i ++){
@@ -111,9 +109,7 @@ function updateStars() {
     }
   });
 }
-if (window.innerWidth > 750) {
- animate();
-}
+animate();
 function animateStars() {
   if (speed > 0) {
     updateStars();
